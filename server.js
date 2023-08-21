@@ -18,7 +18,7 @@ app.use('/api', require('./api/userController'));
 
 if(env === 'dev') {
     console.log('Starting Development')
-    app.listen(port, ()=> {console.log('Backend server started on port ' + port);})
+    app.listen(port, '0.0.0.0', ()=> {console.log('Backend server started on port ' + port);})
 }
 else {
     console.log('Starting Production')
