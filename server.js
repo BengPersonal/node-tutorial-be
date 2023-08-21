@@ -28,7 +28,7 @@ else {
     https.createServer({
         key: privateKey,
         cert: certificate
-    }, app).listen(port, () => { console.log('Server started on port ' + port) });
+    }, app).listen(port,() => {console.log('Server started on port ' + port);})
 }
 
 mongo.getConnection();
