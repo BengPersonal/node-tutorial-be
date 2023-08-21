@@ -8,7 +8,7 @@ const app = express();
 
 const port = 4000;
 
-var env = 'live'
+var env = 'dev'
 
 app.use(cors());
 
@@ -18,7 +18,7 @@ app.use('/api', require('./api/userController'));
 
 if(env === 'dev') {
     console.log('Starting Development')
-    app.listen(port, '0.0.0.0', ()=> {console.log('Backend server started on port ' + port);})
+    app.listen(port, ()=> {console.log('Backend server started on port ' + port);})
 }
 else {
     console.log('Starting Production')
